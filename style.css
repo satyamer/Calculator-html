@@ -1,0 +1,111 @@
+
+#calculator {
+    border-radius: 10%;
+    background-color: #fff;
+    box-shadow:
+        4px 10px 5px black,
+        -2px -3px 3px #d2d2d2;
+    margin: 10px;
+    display: grid;
+    grid-template-areas: 
+        "glow"
+        "display"
+        "icons"
+        "others";
+    height: 400px;
+    row-gap: 0px;
+    width: 250px;
+}
+body {
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+    background-color: rgb(191, 189, 189);
+    align-items: center;
+    justify-content: center;
+}
+#on{
+  border-radius: 100%;
+  height: 25px;
+  width:25px ;
+  background-color: #f54141;
+  border: 2px solid black;
+  grid-area: glow;
+  justify-self:end;
+  margin: 10px;
+}
+#display {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    height: 50px;
+    background-color: #c4ecd0;
+    grid-area: display;
+    border-radius: 10px;
+    box-shadow:
+        inset 2px 2px 2px black,
+        inset -2px -2px 2px #eef0f6;
+    color: rgb(128,213,142);
+    font-size:40px;
+    text-align: end;
+    overflow: scroll;
+    width: 230px;
+    justify-self:center;
+    
+}
+#cner {
+    display: grid;
+    grid-area: icons;
+    /*   grid-template-areas:'n7 n8 n9 c'
+                    'n4 n5 n6 s'
+                    'n1 n2 n3 m'
+                    'n0 dot eql +';  */
+    column-gap: 2px;
+
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(4, 1fr);
+    margin-left: 25px;
+ 
+}
+.icons {
+    background-color:  ;
+    color: black;
+    box-shadow:
+        2px 3px 3px black,
+        -2px -3px 3px rgb(222, 222, 222);
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+    transition: all 0.2s ease-out ;
+}
+.icons:hover {
+    background-color: #e2f4e7;
+    translate: scale(.5);
+    color: black;
+    box-shadow:
+        2px 3px 3px black,
+        -2px -3px 3px rgb(222, 222, 222);
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.spc{
+  background-color: #ff8b1a;
+}
+.spc:hover{
+  transform:rotate(6deg);
+  background-color: #f6d8bb;
+}
+.sbl{
+  background-color: rgb(188,172,255);
+}
+.sbl:hover{
+  transform: scale(1.2);
+  background-color:rgb(116,88,235) ;
+}
